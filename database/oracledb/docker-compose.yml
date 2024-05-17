@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  oracledb19c:
+    image: oracle/database:19.3.0-ee
+    environment:
+      - ORACLE_PWD=password
+      - ORACLE_CHARACTERSET=AL32UTF8
+    ports:
+      - "1521:1521"
+      - "5500:5500"
+    volumes:
+      - ./oracle-data:/opt/oracle/oradata
+    restart: always
