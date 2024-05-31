@@ -5,8 +5,7 @@ services:
       - HTTP_PROXY=${http_proxy}
       - HTTPS_PROXY=${https_proxy}
     ports:
-      - 127.0.0.1:1242:1242
-      - "[::1]:1242:1242"
+      - 1242:1242
     volumes:
       - ./config:/app/config
       - ./plugins:/app/plugins
