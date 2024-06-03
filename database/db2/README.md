@@ -1,0 +1,2 @@
+- username: `db2inst1`
+- password: `password`
