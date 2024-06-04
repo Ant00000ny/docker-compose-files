@@ -1,0 +1,19 @@
+services:
+  dm8_single:
+    image: local:dm8 # 重新 tag 后使用该本地镜像
+    restart: always
+    container_name: dm8_test
+    privileged: true
+    ports:
+      - 30236:5236
+    environment:
+      - PAGE_SIZE=16
+      - LD_LIBRARY_PATH=/opt/dmdbms/bin
+      - EXTENT_SIZE=32
+      - BLANK_PAD_MODE=1
+      - LOG_SIZE=1024
+      - UNICODE_FLAG=1
+      - LENGTH_IN_CHAR=1
+      - INSTANCE_NAME=dm8_test
+    volumes:
+      - ./dm8-data:/opt/dmdbms/data
