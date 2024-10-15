@@ -4,6 +4,9 @@ services:
     environment:
       - ACCOUNT=${QQ_NUMBER}
       - WS_ENABLE=true
+      - NAPCAT_UID=${NAPCAT_UID}
+      - NAPCAT_GID=${NAPCAT_GID}
+
     ports:
       - "3001:3001"
       - "6099:6099"
