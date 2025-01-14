@@ -14,4 +14,4 @@ Java DM 驱动文件：https://eco.dameng.com/download/ 页面底部
 
 JDBC 驱动使用指南：https://eco.dameng.com/document/dm/zh-cn/app-dev/java-jdbc
 
-默认凭据：SYSDBA / SYSDBA001
+默认凭据：SYSDBA / SYSDBA001 (如果不正确，使用 docker inspect <container id>，找到 SYSDBA_PWD=xxx 获取密码）
